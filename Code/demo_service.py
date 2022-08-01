@@ -1,11 +1,3 @@
-'''
-encoding: utf-8
-Author : Jingxuan Li
-Datetime : 2022/7/23 21:33
-Product : PyCharm
-File : demo_service_02.py
-Description : 文件说明
-'''
 import json
 
 from flask import Flask
@@ -103,7 +95,6 @@ class config:
   if scheduled_sampling:
     model_name += '_teacher'
 
-  #调用系统命令行来创建文件夹
   directory_path = os.path.join(root_path, 'model_save/' + model_name + '/')
   if not os.path.exists(directory_path):
     os.makedirs(directory_path)
@@ -456,13 +447,7 @@ class Seq2seq(nn.Module):
         return self.seq_score() <= other.seq_score()
 
 import heapq
-"""
-heapq 实现了适用于 Python 列表的最小堆排序算法。
 
-堆是一个树状的数据结构，其中的子节点与父节点属于排序关系。可以使用列表或数组来表示二进制堆，使得元素 N 的子元素位于 2 * N + 1 和 2 * N + 2 的位置（对于从零开始的索引）。这种布局使得可以在适当的位置重新排列堆，因此在添加或删除数据时无需重新分配内存。
-
-max-heap 确保父级大于或等于其子级。min-heap 要求父项小于或等于其子级。Python 的heapq模块实现了一个 min-heap。
-"""
 def add2heap(heap, item, k):
     """Maintain a heap with k nodes and the smallest one as root.
     """
@@ -557,20 +542,20 @@ def predict():
         data = json.loads(request.data)
         if "text" not in data.keys() or not isinstance(data["text"], str) or len(data["text"]) == 0:
             rsp["success"] = False
-            rsp["info"] = "不合法的文本输入（text）！"
+            rsp["info"] = "Invalid Input（text）！"
             return json.dumps(rsp, ensure_ascii=False, indent=2)
         global __PREDICTOR__
         if __PREDICTOR__ is None:
             rsp["success"] = False
-            rsp["info"] = "服务尚未准备好，请稍等！"
+            rsp["info"] = "Waiting for Service！"
         else:
             rsp["result"] = __PREDICTOR__.predict(data["text"].split())
     except RuntimeError as runtime_error:
         rsp["success"] = False
-        rsp["info"] = "未知错误 {0}.".format(str(runtime_error))
+        rsp["info"] = "Unknown Error {0}.".format(str(runtime_error))
     except json.decoder.JSONDecodeError as json_decode_error:
         rsp["success"] = False
-        rsp["info"] = "解析输入错误 {0}.".format(str(json_decode_error))
+        rsp["info"] = "Input Error {0}.".format(str(json_decode_error))
     except Exception as exception:
         rsp["success"] = False
         rsp["info"] = str(exception)
