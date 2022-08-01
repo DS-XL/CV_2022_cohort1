@@ -6,6 +6,11 @@ The working repo for the 2022 advance AI program - CV
 2. The processes for coding are arranged in orders. To excute these codes, using `python name_of_file.py`.
 3. Considering the privacy of dataset, we will provide the original images and product descriptions.
 
+# Directory and Files
+1. The code folder has all the codes for creating this project.
+2. The report and presentation describe the details for this project.
+3. The video is for the presentation.
+
 You can use the following link to know more about this project:
 
 https://medium.com/@jingxuanli/product-design-process-for-intelligent-marketing-text-generator-multimodal-text-summarization-d8139ee433dc
