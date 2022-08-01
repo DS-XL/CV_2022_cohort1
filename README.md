@@ -1,6 +1,3 @@
-# CV_2022_cohort1
-The working repo for the 2022 advance AI program - CV
-
 # Intelligent Marketing Text Generator
 1. This folder contains the codes to generate a demo for intelligent marketing text generator. 
 2. The processes for coding are arranged in orders. To excute these codes, using `python name_of_file.py`.
