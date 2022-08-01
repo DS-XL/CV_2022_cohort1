@@ -9,7 +9,6 @@ The working repo for the 2022 advance AI program - CV
 # Directory and Files
 1. The code folder has all the codes for creating this project.
 2. The report and presentation describe the details for this project.
-3. The video is for the presentation.
 
 You can use the following link to know more about this project:
 
