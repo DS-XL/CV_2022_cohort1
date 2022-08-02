@@ -1,7 +1,7 @@
 # Intelligent Marketing Text Generator
 1. This folder contains the codes to generate a demo for intelligent marketing text generator. 
 2. The processes for coding are arranged in orders. To excute these codes, using `python name_of_file.py`.
-3. Considering the privacy of dataset, we will provide the original images and product descriptions.
+3. Considering the privacy of dataset, we will not provide the original images and product descriptions.
 
 # Directory and Files
 1. The code folder has all the codes for creating this project.
