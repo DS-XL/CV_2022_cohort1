@@ -20,6 +20,7 @@ This directory contains the codes generating the demo in the report. There are t
     + competition.py: code generating demo of competition. To run just type: `python competition.py`
 2. rule_based: codes for generate demo of rule based. The code structure is similar to auto_score
 3. Group2-Project2-Final Report.pdf: the final report for this project
-
+# Demo
+![](https://github.com/DS-XL/CV_2022_cohort1/tree/group2/auto_score/output/output_bl_teacher_bad_student_2_compare.gif)
 # License
 This project is licensed under the terms of the MIT license
